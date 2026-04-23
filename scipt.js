@@ -1,55 +1,32 @@
-// var password = "bbbbhj"
-// var neme ="user"
-// var age = 25
-// var isActive = true
-const orders = [
-  {
-    id: 1,
-    customer: "Jhon",
-    items: [
-      { name: "Ноутбук", price: 50000, quantity: 1 },
-      { name: "Мышь", price: 1500, quantity: 2 }
-    ]
-  },
-  {
-    id: 2,
-    customer: "Alan",
-    items: [
-      { name: "Телефон", price: 30000, quantity: 1 },
-      { name: "Чехол", price: 1000, quantity: 3 }
-    ]
-  },
-  {
-    id: 3,
-    customer: "Jane",
-    items: [
-      { name: "Клавиатура", price: 2500, quantity: 1 },
-      { name: "Монитор", price: 12000, quantity: 1 }
-    ]
-  }
-];
- totalRevenue = 0;
- maxOrder = 0;
- topCustomer = "";
-
-orders.forEach(order => {
-  let orderSum = 0;
-
-  order.items.forEach(item => {
-    orderSum += item.price * item.quantity;
-  });
-
-  console.log(`Заказ ${order.id} (${order.customer}): ${orderSum} сом`);
-
-  totalRevenue += orderSum;
+ var str = "Привет";
+var num = 10;
+var empty;
 
 
-  if (orderSum > maxOrder) {
-    maxOrder = orderSum;
-    topCustomer = order.customer;
-  }
-});
+console.log(empty);        
+console.log(false);        
+console.log(true);         
+console.log("text" * 2);   
+console.log(typeof num);   
+console.log(typeof str);  
 
-console.log("Общий доход магазина:", totalRevenue, "сом");
-
-console.log("Самый дорогой заказ сделал:", topCustomer);
+var input = prompt("сума покупки ($):");
+var amount = Number(input);
+if (isNaN(amount) || amount <= 0);
+   else {
+    var discount = 0;
+    if (amount < 100) {
+        discount = 0;
+    } else if (amount >= 100 && amount < 500) {
+        discount = 0.05;
+    } else if (amount >= 500 && amount < 1000) {
+        discount = 0.10;
+    } else {
+        discount = 0.15;
+    }
+    var finalPrice = amount - (amount * discount);
+    finalPrice = finalPrice.toFixed(2);
+    console.log("Сумма:", amount + "$");
+    console.log("Скидка:", discount * 100 + "%");
+    console.log("Итог:", finalPrice + "$");
+}
